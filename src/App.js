@@ -10,16 +10,16 @@ import Papa from 'papaparse';
 const App = () => {
   const [zoomLevel] = useState(11);
   const [resolution, setResolution] = useState(6);
+  const [hexagons, setHexagons] = useState([]);
+  const [showDrawer, setShowDrawer] = useState(false);
+  const [showIndexes, setShowIndexes] = useState(false);
   const [boundary, setBoundary] = useState({
     north: 40.9176,
     south: 40.4774,
     west: -74.2591,
     east: -73.7004
   });
-  const [hexagons, setHexagons] = useState([]);
-  const [showDrawer, setShowDrawer] = useState(false);
-  const [showIndexes, setShowIndexes] = useState(false); // State to control visibility of indexes
-
+  
   const handleBoundaryChange = (e) => {
     setBoundary({
       ...boundary,
