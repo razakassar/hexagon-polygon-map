@@ -1,0 +1,27 @@
+
+  .center-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Or any other suitable value for vertical spacing */
+  }
+  .floating-button {
+    position: fixed;   /* Fixed positioning relative to the viewport */
+    bottom: 20px;      /* 20px from the bottom */
+    left: 20px;        /* 20px from the left */
+    z-index: 1000;     /* High z-index to keep it above other content */
+  }
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;  /* Prevent scrollbars if the content exactly fits */
+    height: 100%;      /* Ensure full height */
+    width: 100%;       /* Ensure full width */
+  }
+  
+  /* Additional style to handle any container around the map */
+  #mapContainer {    /* Ensure the id or class matches your container's identifier */
+    margin: 0;
+    padding: 0;
+    height: 100vh;    /* Full viewport height */
+    width: 100%;      /* Full width */
+  }
